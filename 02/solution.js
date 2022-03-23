@@ -1,14 +1,6 @@
-letter => {
-    let x = letter.split(" ")
-    let obj = {}
-    x.forEach( e => {
-      if( e != "" && ![...e].includes("_")){
-        if(typeof obj[e] != "undefined" ){
-            obj[e] = obj[e] + 1
-        }else{
-          obj[e] = 1
-        }
-      }
-    })
-    return obj
-  }
+const letter = l => l.split(" ").reduce( (acc, e ) => {
+    if (e != "" && ![...e].includes("_")) {
+        acc[e] = typeof acc[e] != "undefined" ? acc[e] + 1 : 1
+    }
+    return acc
+  }, {})
