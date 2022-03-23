@@ -1,1 +1,1 @@
-console.log("Hola mundo")
+ovejas => ovejas.filter( oveja => oveja.color == "rojo" && ([...oveja.name.toLowerCase()].includes("a") && [...oveja.name.toLowerCase()].includes("n") ) )
